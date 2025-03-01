@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Raleway;
+  src: url(../assets/fonts/Raleway-Light.ttf);
+}
+.header {
+  width: 100%;
+  height: 70px;
+  border: solid black;
+  position: relative;
+}
+.header .header__title {
+  color: #08A6E4;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: Raleway;
+  font-size: 30px;
+}
+.header .header__burger {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.header .header__burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  margin: 3px 0;
+  background-color: #08A6E4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+}/*# sourceMappingURL=style.css.map */

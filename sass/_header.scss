@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    height: 70px;
+    border: solid black;
+    position: relative;
+    .header__title {
+        color: $colorblue;
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 20px;
+        font-family: $fontRaleway;
+        font-size: 30px;
+    }
+    .header__burger {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            margin: 3px 0;
+            background-color: $colorblue;
+        }
+    }
+}
+
+
+
+
+
+    
