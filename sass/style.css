@@ -2,16 +2,20 @@
   font-family: Raleway;
   src: url(../assets/fonts/Raleway-Light.ttf);
 }
+@font-face {
+  font-family: "Open Sans";
+  src: url(../assets/fonts/OpenSans-Regular.ttf);
+}
 .header {
   width: 100%;
-  height: 70px;
-  border: solid black;
+  height: 60px;
   position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.329);
 }
 .header .header__title {
   color: #08A6E4;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 20px;
   font-family: Raleway;
   font-size: 30px;
@@ -21,8 +25,8 @@
   height: 20px;
   cursor: pointer;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 25px;
+  right: 25px;
 }
 .header .header__burger span {
   display: block;
@@ -30,6 +34,57 @@
   width: 100%;
   margin: 3px 0;
   background-color: #08A6E4;
+}
+
+.opensection {
+  text-align: center;
+  border: solid blue;
+  width: 100%;
+}
+.opensection .open__article {
+  margin: 130px auto;
+  width: 300px;
+  height: 220px;
+  top: 170px;
+  left: 30px;
+  border: solid black;
+}
+.opensection .open__article .article__title {
+  font-family: Raleway;
+  font-size: 35px;
+  padding-top: 10px;
+}
+.opensection .open__article .article__paragraph {
+  font-family: "Open Sans";
+  font-size: 15px;
+  padding-top: 20px;
+  margin: 0 20px;
+}
+.opensection .open__article .article__btn {
+  cursor: pointer;
+  background-color: #08A6E4;
+  color: white;
+  border: #08A6E4;
+  border-radius: 40px;
+  box-shadow: 0px 4px 10px rgba(8, 166, 228, 0.4);
+  width: 100%;
+  height: 60px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  margin-top: 40px;
+}
+.opensection .open__div {
+  width: 100%;
+  border: solid red;
+}
+.opensection .open__div .div__img {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  height: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 * {

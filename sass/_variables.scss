@@ -3,5 +3,11 @@
     src: url(../assets/fonts/Raleway-Light.ttf);
 }
 
+@font-face {
+    font-family: "Open Sans";
+    src: url(../assets/fonts/OpenSans-Regular.ttf);
+}
+
 $colorblue: #08A6E4;
 $fontRaleway: Raleway;
+$fontSans: "Open Sans"
