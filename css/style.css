@@ -45,7 +45,7 @@ body {
   text-align: center;
   width: 100%; }
   .opensection .open__article {
-    margin: 30px auto;
+    margin: 100px auto 30px;
     width: 300px;
     height: 220px;
     top: 100px;
@@ -88,7 +88,7 @@ body {
   width: 100%;
   height: auto;
   text-align: center;
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 20px 0px; }
   .mostsection .most__title {
     font-family: Raleway;
@@ -142,8 +142,9 @@ body {
       background-color: #55dfb4; }
 
 .sectioncards {
+  border: solid #f7f7f7;
   background-color: #f7f7f7;
-  border: solid black; }
+  margin-top: 40px; }
   .sectioncards .section__card {
     width: 315px;
     height: 380px;
@@ -213,5 +214,37 @@ body {
         font-size: 0.9em;
         color: black;
         font-weight: 500; }
+  .sectioncards .section__longcard {
+    width: 315px;
+    height: 520px;
+    margin: 40px auto;
+    border: solid 1px #e8e9ed;
+    border-radius: 5px;
+    background-color: white; }
+    .sectioncards .section__longcard .div__toplongcard {
+      width: 90%;
+      height: 270px;
+      margin: 30px auto 0px; }
+      .sectioncards .section__longcard .div__toplongcard .toplongcard__title {
+        font-family: Raleway;
+        font-weight: 500;
+        font-size: 2em;
+        width: 260px; }
+      .sectioncards .section__longcard .div__toplongcard .toplongcard__text {
+        width: 274px;
+        margin-top: 20px;
+        margin-right: 20px;
+        font-family: "Open Sans";
+        font-size: 1em;
+        color: black;
+        font-weight: 500; }
+    .sectioncards .section__longcard .div__bottomlongcard {
+      width: 100%;
+      height: 220px;
+      background-color: #55dfb4;
+      border: solid 1px #e8e9ed;
+      border-radius: 5px; }
+      .sectioncards .section__longcard .div__bottomlongcard .longcard__img {
+        margin-top: 30px; }
 
 /*# sourceMappingURL=style.css.map */

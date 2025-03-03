@@ -1,6 +1,7 @@
 .sectioncards{
+    border: solid  rgba(247, 247, 247, 1);
     background-color: rgba(247, 247, 247, 1);
-    border: solid black;
+    margin-top: 40px;
     .section__card{
         width: 315px;
         height: 380px;
@@ -78,6 +79,44 @@
                 font-size: 0.9em;
                 color: rgba(0, 0, 0, 1);
                 font-weight: 500;
+            }
+        }
+    }
+    .section__longcard{
+        width: 315px;
+        height: 520px;
+        margin: 40px auto;
+        border: solid 1px rgba(232, 233, 237, 1);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 1);
+        .div__toplongcard{
+            width: 90%;
+            height: 270px;
+            margin: 30px auto 0px;
+            .toplongcard__title{
+                font-family: $fontRaleway;
+                font-weight: 500;
+                font-size: 2em;
+                width: 260px;
+            }
+            .toplongcard__text{
+                width: 274px;
+                margin-top: 20px;
+                margin-right: 20px;
+                font-family: $fontSans;
+                font-size: 1em;
+                color: rgba(0, 0, 0, 1);
+                font-weight: 500;
+            }
+        }
+        .div__bottomlongcard{
+            width: 100%;
+            height: 220px;
+            background-color: rgba(85, 223, 180, 1);
+            border: solid 1px rgba(232, 233, 237, 1);
+            border-radius: 5px;
+            .longcard__img{
+                margin-top: 30px;
             }
         }
     }
