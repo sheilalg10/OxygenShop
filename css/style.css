@@ -139,4 +139,77 @@ body {
     .mostsection .most__article .circle--green {
       background-color: #55dfb4; }
 
+.sectioncards {
+  background-color: #f7f7f7;
+  border: solid black; }
+  .sectioncards .section__card {
+    width: 315px;
+    height: 380px;
+    margin: 40px auto;
+    border: solid 1px #e8e9ed;
+    border-radius: 5px;
+    background-color: white; }
+    .sectioncards .section__card .div__top {
+      width: 100%;
+      height: auto;
+      margin: 30px auto 10px;
+      position: relative;
+      display: inline-block; }
+      .sectioncards .section__card .div__top .card__circle {
+        width: 90px;
+        height: 90px;
+        border-radius: 40px;
+        transform: rotate(45deg);
+        background-color: #fb3b64;
+        position: absolute;
+        left: 10.5em;
+        bottom: 2.5em; }
+      .sectioncards .section__card .div__top .card__ellipse {
+        width: 132px;
+        height: 132px;
+        background-color: #08a6e4;
+        position: absolute;
+        border-radius: 50%;
+        left: 5em;
+        bottom: 1em; }
+      .sectioncards .section__card .div__top .card__macbook {
+        display: block;
+        width: 195px;
+        height: 110px;
+        margin: 0 auto;
+        position: relative; }
+      .sectioncards .section__card .div__top .card__phone {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        left: 0.9em;
+        bottom: 0.4em; }
+    .sectioncards .section__card .div__bottom {
+      width: 90%;
+      height: auto;
+      margin: 0px auto; }
+      .sectioncards .section__card .div__bottom .bottom__title {
+        margin-top: 30px;
+        font-family: Raleway;
+        font-weight: 500;
+        font-size: 2em;
+        width: 218px; }
+      .sectioncards .section__card .div__bottom .bottom__text {
+        margin-top: 40px;
+        font-family: "Open Sans";
+        font-size: 0.9em;
+        color: black;
+        font-weight: 500; }
+      .sectioncards .section__card .div__bottom .bottom__title2 {
+        font-family: Raleway;
+        font-weight: 500;
+        font-size: 2em;
+        width: 218px; }
+      .sectioncards .section__card .div__bottom .bottom__text2 {
+        margin-top: 20px;
+        font-family: "Open Sans";
+        font-size: 0.9em;
+        color: black;
+        font-weight: 500; }
+
 /*# sourceMappingURL=style.css.map */

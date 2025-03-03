@@ -166,4 +166,89 @@ body {
 }
 .mostsection .most__article .circle--green {
   background-color: rgb(85, 223, 180);
+}
+
+.sectioncards {
+  background-color: rgb(247, 247, 247);
+  border: solid black;
+}
+.sectioncards .section__card {
+  width: 315px;
+  height: 380px;
+  margin: 40px auto;
+  border: solid 1px rgb(232, 233, 237);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.sectioncards .section__card .div__top {
+  width: 100%;
+  height: auto;
+  margin: 30px auto 10px;
+  position: relative;
+  display: inline-block;
+}
+.sectioncards .section__card .div__top .card__circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 40px;
+  transform: rotate(45deg);
+  background-color: rgb(251, 59, 100);
+  position: absolute;
+  left: 10.5em;
+  bottom: 2.5em;
+}
+.sectioncards .section__card .div__top .card__ellipse {
+  width: 132px;
+  height: 132px;
+  background-color: rgb(8, 166, 228);
+  position: absolute;
+  border-radius: 50%;
+  left: 5em;
+  bottom: 1em;
+}
+.sectioncards .section__card .div__top .card__macbook {
+  display: block;
+  width: 195px;
+  height: 110px;
+  margin: 0 auto;
+  position: relative;
+}
+.sectioncards .section__card .div__top .card__phone {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  left: 0.9em;
+  bottom: 0.4em;
+}
+.sectioncards .section__card .div__bottom {
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+}
+.sectioncards .section__card .div__bottom .bottom__title {
+  margin-top: 30px;
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 2em;
+  width: 218px;
+}
+.sectioncards .section__card .div__bottom .bottom__text {
+  margin-top: 40px;
+  font-family: "Open Sans";
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+.sectioncards .section__card .div__bottom .bottom__title2 {
+  font-family: Raleway;
+  font-weight: 500;
+  font-size: 2em;
+  width: 218px;
+}
+.sectioncards .section__card .div__bottom .bottom__text2 {
+  margin-top: 20px;
+  font-family: "Open Sans";
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
