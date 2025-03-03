@@ -1,7 +1,3 @@
-@import "variables";
-@import "header";
-@import "opensection";
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,3 +6,9 @@
 body {
   min-width: 320px;
 }
+
+@import "variables";
+@import "header";
+@import "openSection";
+@import "popularSection";
+

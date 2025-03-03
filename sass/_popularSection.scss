@@ -1,0 +1,69 @@
+.mostsection{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px 0px;
+    .most__title{
+        font-family: Raleway;
+        font-size: 2em;
+        padding: 0 1em;
+        font-weight: lighter;
+    }
+    .most__article{
+        margin-top: 20px;
+        height: auto;
+        .article__stat{
+            width: 160px;
+            height: 170px;
+            margin: 10px auto;
+            .stat__circle{
+                margin: 10px 0;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: inline-block;
+                position: relative;
+                .stat__circle__person{
+                    position: absolute;
+                    width: 40px;
+                    height: 50px;
+                    top: 2px;
+                }
+                .stat__circle__eye{
+                    position: absolute;
+                    top: 10px;
+                    left: 18px;
+                }
+                .stat__circle__catalog{
+                    position: absolute;
+                    width: 48px;
+                    height: 44px;
+                    top: 8px;
+                    left: 32px;
+                }
+            }
+            .stat__number{
+                font-family: $fontRalewayBlod;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+            .stat__text{
+                font-family: $fontRaleway;
+                font-size: 1.1em;
+                color: lightslategrey;
+                margin: 20px 20px;
+                text-align: center;
+            }
+        }
+        .stat__circle--red{
+            background-color: rgba(251, 59, 100, 1);
+        }
+        .circle--blue{
+            background-color: rgba(8, 166, 228, 1);
+        }
+        .circle--green{
+            background-color: rgba(85, 223, 180, 1);
+        }
+    }
+}

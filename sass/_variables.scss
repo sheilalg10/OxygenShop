@@ -4,10 +4,16 @@
 }
 
 @font-face {
+    font-family: RalewayBlod;
+    src: url(../assets/fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
     font-family: "Open Sans";
     src: url(../assets/fonts/OpenSans-Regular.ttf);
 }
 
 $colorblue: #08A6E4;
 $fontRaleway: Raleway;
-$fontSans: "Open Sans"
+$fontSans: "Open Sans";
+$fontRalewayBlod: RalewayBlod;

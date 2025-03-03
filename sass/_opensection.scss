@@ -1,6 +1,5 @@
 .opensection{
     text-align: center;
-    border: solid blue;
     width: 100%;
     .open__article{
         margin: 130px auto;
@@ -8,7 +7,6 @@
         height: 220px;
         top: 170px;
         left: 30px;
-        border: solid black;
         .article__title{
             font-family: Raleway;
             font-size: 35px;
@@ -31,21 +29,20 @@
             height: 60px;
             font-family: $fontSans;
             font-size: 16px;
-            margin-top: 40px;
+            margin-top: 30px;
         }
     }
 
     .open__div{
         width: 100%;
-        border: solid red;
+        height: 260px;
         .div__img{
             display: block;
             position: relative;
+            background-size: 700px;
             width: 100%;
-            max-width: 400px;
             margin: 0 auto;
-            height: auto;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            height: 100%;
         }
     }
 }
