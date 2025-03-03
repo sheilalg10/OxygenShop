@@ -247,4 +247,40 @@ body {
       .sectioncards .section__longcard .div__bottomlongcard .longcard__img {
         margin-top: 30px; }
 
+.sectionpricing {
+  border: solid black;
+  width: 100%;
+  margin: 40px auto; }
+  .sectionpricing .pricing__h1 {
+    font-family: Raleway;
+    font-size: 2.5em; }
+  .sectionpricing .pricing__basic {
+    margin: 20px auto;
+    width: 300px;
+    height: 280px;
+    border: solid #fb3b64 1px;
+    border-radius: 20px;
+    position: relative; }
+    .sectionpricing .pricing__basic .pricing__header {
+      display: inline-block;
+      width: 35%;
+      border: solid black; }
+    .sectionpricing .pricing__basic .pricing__list {
+      width: 60%;
+      display: inline-block; }
+      .sectionpricing .pricing__basic .pricing__list .list__item {
+        width: 100%;
+        display: block;
+        border: solid blue; }
+        .sectionpricing .pricing__basic .pricing__list .list__item .div__item {
+          width: 45%; }
+          .sectionpricing .pricing__basic .pricing__list .list__item .div__item .item__img {
+            display: inline-block;
+            text-align: left;
+            border: solid black; }
+        .sectionpricing .pricing__basic .pricing__list .list__item .item__text {
+          display: inline-block;
+          width: 70%;
+          text-align: left; }
+
 /*# sourceMappingURL=style.css.map */
