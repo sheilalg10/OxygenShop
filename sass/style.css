@@ -295,46 +295,101 @@ body {
 }
 
 .sectionpricing {
-  border: solid black;
   width: 100%;
   margin: 40px auto;
+  text-align: center;
 }
 .sectionpricing .pricing__h1 {
   font-family: Raleway;
   font-size: 2.5em;
 }
-.sectionpricing .pricing__basic {
-  margin: 20px auto;
+.sectionpricing .pricing__card {
   width: 300px;
-  height: 280px;
-  border: solid rgb(251, 59, 100) 1px;
+  height: 260px;
   border-radius: 20px;
+  border: solid 1px rgb(251, 59, 100);
+  margin: 20px auto 50px;
   position: relative;
 }
-.sectionpricing .pricing__basic .pricing__header {
+.sectionpricing .pricing__card .pricing__card__left {
   display: inline-block;
   width: 35%;
-  border: solid black;
+  height: auto;
+  position: relative;
+  bottom: 60px;
+  margin-left: 10px;
 }
-.sectionpricing .pricing__basic .pricing__list {
-  width: 60%;
+.sectionpricing .pricing__card .pricing__card__left .pricing__card__title {
+  font-family: RalewayBlod;
+  font-size: 1.1em;
+}
+.sectionpricing .pricing__card .pricing__card__left .pricing__card__text {
+  font-family: "Open Sans";
+  font-size: 3em;
+  color: rgb(251, 59, 100);
+  font-weight: 300;
+}
+.sectionpricing .pricing__card .pricing__card__left .pricing__card__offer {
+  font-family: Raleway;
+  font-size: 0.7em;
+  font-weight: 700;
+}
+.sectionpricing .pricing__card .pricing__card__left .pricing__card__text--blue {
+  color: rgb(7, 172, 230);
+}
+.sectionpricing .pricing__card .pricing__card__left .pricing__card__text--green {
+  color: rgb(85, 223, 180);
+}
+.sectionpricing .pricing__card .pricing__card__left--blue {
+  bottom: 40px;
+}
+.sectionpricing .pricing__card .pricing__card__left--green {
+  bottom: 40px;
+}
+.sectionpricing .pricing__card .pricing__card__right {
   display: inline-block;
+  width: 55%;
+  height: auto;
+  margin-left: 10px;
 }
-.sectionpricing .pricing__basic .pricing__list .list__item {
-  width: 100%;
-  display: block;
-  border: solid blue;
-}
-.sectionpricing .pricing__basic .pricing__list .list__item .div__item {
-  width: 45%;
-}
-.sectionpricing .pricing__basic .pricing__list .list__item .div__item .item__img {
-  display: inline-block;
+.sectionpricing .pricing__card .pricing__card__right .pricing__card__list {
+  list-style: none;
   text-align: left;
-  border: solid black;
 }
-.sectionpricing .pricing__basic .pricing__list .list__item .item__text {
-  display: inline-block;
-  width: 70%;
-  text-align: left;
+.sectionpricing .pricing__card .pricing__card__right .pricing__card__list .pricing__card__item {
+  margin: 20px 0;
+  font-family: "Open Sans";
+  font-size: 1em;
+  font-weight: 400;
+}
+.sectionpricing .pricing__card .pricing__card__right .pricing__card__list .pricing__card__item img {
+  padding-right: 5px;
+}
+.sectionpricing .pricing__card .pricing__card__button {
+  border: 1px rgb(235, 71, 110);
+  background-color: rgb(235, 71, 110);
+  color: white;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  position: relative;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+}
+.sectionpricing .pricing__card .pricing__card__button--blue {
+  background-color: rgb(7, 172, 230);
+  border: solid 1px rgb(7, 172, 230);
+}
+.sectionpricing .pricing__card .pricing__card__button--green {
+  background-color: rgb(85, 223, 180);
+  border: solid 1px rgb(85, 223, 180);
+}
+.sectionpricing .pricing__card--blue {
+  border: rgb(7, 172, 230) solid 1px;
+}
+.sectionpricing .pricing__card--green {
+  border: rgb(85, 223, 180) solid 1px;
 }/*# sourceMappingURL=style.css.map */

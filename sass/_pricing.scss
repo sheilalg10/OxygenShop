@@ -1,46 +1,100 @@
 .sectionpricing{
-    border: solid black;
     width: 100%;
     margin: 40px auto;
+    text-align: center;
     .pricing__h1{
         font-family: $fontRaleway;
-        font-size: 2.5em
+        font-size: 2.5em;
     }
-    .pricing__basic{
-        margin: 20px auto;
+    .pricing__card{
         width: 300px;
-        height: 280px;
-        border: solid rgba(251, 59, 100, 1) 1px;   
+        height: 260px;
         border-radius: 20px;
-        position: relative;     
-        .pricing__header{
+        border: solid 1px rgba(251, 59, 100, 1);
+        margin: 20px auto 50px;        
+        position: relative;
+        .pricing__card__left{
             display: inline-block;
             width: 35%;
-            border: solid black;
-        }
-        
-        .pricing__list{
-            width: 60%;
-            display: inline-block; 
-            .list__item{
-                width: 100%;
-                display: block;
-                border: solid blue;
-                .div__item{
-                    width: 45%;
-                    .item__img{
-                        display: inline-block;
-                        text-align: left;
-                        border: solid black;
-                    }
-                }                             
-                .item__text{
-                    display: inline-block;
-                    width: 70%;
-                    text-align: left;
-                }
+            height: auto;
+            position: relative;
+            bottom: 60px;
+            margin-left: 10px;
+            .pricing__card__title{
+                font-family: $fontRalewayBlod;
+                font-size: 1.1em;
+            }
+            .pricing__card__text{
+                font-family: $fontSans;
+                font-size: 3em;
+                color: rgba(251, 59, 100, 1);
+                font-weight: 300;
+            }
+            .pricing__card__offer{
+                font-family: $fontRaleway;
+                font-size: 0.7em;
+                font-weight: 700;
+            }
+            .pricing__card__text--blue{
+                color: rgba(7, 172, 230, 1);
+            }
+            .pricing__card__text--green{
+                color: rgba(85, 223, 180, 1);
             }
         }
-     }
-
+        .pricing__card__left--blue{
+            bottom: 40px;
+        }
+        .pricing__card__left--green{
+            bottom: 40px;
+        }
+        .pricing__card__right{
+            display: inline-block;
+            width: 55%;
+            height: auto;
+            margin-left: 10px;
+            .pricing__card__list{
+                list-style: none;
+                text-align: left;
+                .pricing__card__item{
+                    margin: 20px 0;
+                    font-family: $fontSans;
+                    font-size: 1em;
+                    font-weight: 400;
+                    img {
+                        padding-right: 5px;
+                    }
+                }
+            }            
+        }
+        .pricing__card__button{
+            border: 1px rgba(235, 71, 110, 1);
+            background-color: rgba(235, 71, 110, 1);
+            color: white;
+            text-align: center;
+            width: 150px;
+            height: 50px;
+            border-radius: 23px;
+            position: relative;
+            font-family: $fontSans;
+            font-weight: 700;
+            font-size: 0.8em;
+            margin-bottom: 20px;            
+        }
+        .pricing__card__button--blue{
+            background-color: rgba(7, 172, 230, 1);
+            border: solid 1px rgba(7, 172, 230, 1);
+        }
+        .pricing__card__button--green{
+            background-color: rgba(85, 223, 180, 1);
+            border: solid 1px rgba(85, 223, 180, 1);
+        }
+    }
+    .pricing__card--blue{
+        border: rgba(7, 172, 230, 1) solid 1px;
+    }
+    .pricing__card--green{
+        border: rgba(85, 223, 180, 1) solid 1px;
+    }       
 }
+
