@@ -79,7 +79,8 @@
             font-family: $fontSans;
             font-weight: 700;
             font-size: 0.8em;
-            margin-bottom: 20px;            
+            margin-bottom: 20px;
+            cursor: pointer;            
         }
         .pricing__card__button--blue{
             background-color: rgba(7, 172, 230, 1);
@@ -98,3 +99,60 @@
     }       
 }
 
+@media screen and (min-width: 840px){
+    .sectionpricing{
+        .pricing__cards{            
+            display: flex;
+            width: 80%;
+            margin: 15px auto;
+            .pricing__card{
+                width: 370px;
+                height: 500px;
+                text-align: center;
+                .pricing__card__left{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    top: 50px;
+                    left: 100px
+                }
+                .pricing__card__right{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: 60px;
+                    margin-left: 10px;
+                    .pricing__card__list{
+                        width: 100%;
+                        margin-top: 50px;
+                        margin-left: 80px;
+                        text-align: center;
+                    }
+                }
+                .pricing__card__button{
+                    margin-top: 40px;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .pricing__card--red:hover{
+            box-shadow: 0px 4px 10px rgba(235, 71, 110, 1);
+            transform: scale(1.1);
+        }
+
+        .pricing__card--blue:hover{
+            box-shadow: 0px 4px 10px rgba($colorblue, 0.4);
+            transform: scale(1.1);
+        }
+
+        .pricing__card--green:hover{
+            box-shadow: 0px 4px 10px rgba(85, 223, 180, 1);
+            transform: scale(1.1);
+        }
+
+        .pricing__card__button--red{
+            top: 10px;
+        }
+    }
+}

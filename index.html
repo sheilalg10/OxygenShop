@@ -14,6 +14,14 @@
         <span></span>
         <span></span>
       </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#">WHY US</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">BENEFITS</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">PRICES</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">CONTACT</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="opensection">
@@ -61,7 +69,7 @@
         </article>
       </section>
       <section class="sectioncards">
-        <article class="section__card">
+        <article class="section__card section__card--right">
           <div class="div__top">
             <div class="card__circle"></div>
             <img class="card__macbook" src="assets/images/Macbook2 2.svg" />
@@ -105,92 +113,94 @@
       </section>
       <section class="sectionpricing">
         <h1 class="pricing__h1">Pricing</h1>
-        <article class="pricing__card">
-          <div class="pricing__card__left">
-            <h2 class="pricing__card__title">Basic</h2>
-            <p class="pricing__card__text">$0</p>
-          </div>
-          <div class="pricing__card__right">
-            <ul class="pricing__card__list">
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 100 MB HDD
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 1 Subdomain
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 2 E-mails
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Cross.png" /> Two years license
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Cross.png" /> Full support
-              </li>
-            </ul>
-          </div>
-          <button class="pricing__card__button">Begin</button>
-        </article>
-        <!-- Tarjeta zaul -->
-        <article class="pricing__card pricing__card--blue">
-          <div class="pricing__card__left pricing__card__left--blue">
-            <h2 class="pricing__card__title">Professional</h2>
-            <p class="pricing__card__text pricing__card__text--blue">$25</p>
-            <p class="pricing__card__offer">Limited offer</p>
-          </div>
-          <div class="pricing__card__right">
-            <ul class="pricing__card__list">
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 500 MB HDD
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 2 Subdomain
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 5 E-mails
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> One years license
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Cross.png" /> Full support
-              </li>
-            </ul>
-          </div>
-          <button class="pricing__card__button pricing__card__button--blue">
-            Begin
-          </button>
-        </article>
-        <!-- TARJETA VERDE -->
-        <article class="pricing__card pricing__card--green">
-          <div class="pricing__card__left pricing__card__left--green">
-            <h2 class="pricing__card__title">Premium</h2>
-            <p class="pricing__card__text pricing__card__text--green">$60</p>
-            <p class="pricing__card__offer">Limited offer</p>
-          </div>
-          <div class="pricing__card__right">
-            <ul class="pricing__card__list">
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 2 GB HDD
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 5 Subdomain
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> 20 E-mails
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> Tow years license
-              </li>
-              <li class="pricing__card__item">
-                <img src="assets/images/Checkbox.png" /> Full support
-              </li>
-            </ul>
-          </div>
-          <button class="pricing__card__button pricing__card__button--green">
-            Begin
-          </button>
-        </article>
+        <div class="pricing__cards">
+          <article class="pricing__card pricing__card--red">
+            <div class="pricing__card__left">
+              <h2 class="pricing__card__title">Basic</h2>
+              <p class="pricing__card__text">$0</p>
+            </div>
+            <div class="pricing__card__right">
+              <ul class="pricing__card__list">
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 100 MB HDD
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 1 Subdomain
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 2 E-mails
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Cross.png" /> Two years license
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Cross.png" /> Full support
+                </li>
+              </ul>
+            </div>
+            <button class="pricing__card__button pricing__card__button--red">Begin</button>
+          </article>
+          <!-- Tarjeta zaul -->
+          <article class="pricing__card pricing__card--blue">
+            <div class="pricing__card__left pricing__card__left--blue">
+              <h2 class="pricing__card__title">Professional</h2>
+              <p class="pricing__card__text pricing__card__text--blue">$25</p>
+              <p class="pricing__card__offer">Limited offer</p>
+            </div>
+            <div class="pricing__card__right">
+              <ul class="pricing__card__list">
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 500 MB HDD
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 2 Subdomain
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 5 E-mails
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> One years license
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Cross.png" /> Full support
+                </li>
+              </ul>
+            </div>
+            <button class="pricing__card__button pricing__card__button--blue">
+              Begin
+            </button>
+          </article>
+          <!-- TARJETA VERDE -->
+          <article class="pricing__card pricing__card--green">
+            <div class="pricing__card__left pricing__card__left--green">
+              <h2 class="pricing__card__title">Premium</h2>
+              <p class="pricing__card__text pricing__card__text--green">$60</p>
+              <p class="pricing__card__offer">Limited offer</p>
+            </div>
+            <div class="pricing__card__right">
+              <ul class="pricing__card__list">
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 2 GB HDD
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 5 Subdomain
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> 20 E-mails
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> Tow years license
+                </li>
+                <li class="pricing__card__item">
+                  <img src="assets/images/Checkbox.png" /> Full support
+                </li>
+              </ul>
+            </div>
+            <button class="pricing__card__button pricing__card__button--green">
+              Begin
+            </button>
+          </article>
+        </div>
       </section>
       <section class="sectionform">
         <article class="article__form">
@@ -240,8 +250,8 @@
           <p class="footer__text">© 2022 OXYGEN, All Rights Reserved</p>
         </div>
         <div class="footer__icon">
-          <img class="footer__img" src="assets/images/Twitter (2) 1.png">
-          <img src="assets/images/Group (1).png">
+          <img class="footer__img" src="assets/images/Twitter (2) 1.png" />
+          <img src="assets/images/Group (1).png" />
         </div>
       </footer>
     </main>

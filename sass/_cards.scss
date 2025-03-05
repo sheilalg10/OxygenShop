@@ -121,3 +121,17 @@
         }
     }
 }
+
+@media screen and (min-width: 840px){
+    .sectioncards{
+        .section__card{
+            width: 50%;
+            height: 370px;
+            display: flex;
+
+        }
+        .section__card--right{
+            flex-direction: row-reverse;
+        }
+    }
+}

@@ -67,3 +67,15 @@
         }
     }
 }
+
+@media screen and (min-width: 840px){
+    .mostsection{
+        margin: 50px 0;
+        .most__article{
+            display: flex;
+            margin: 50px auto;
+            width: 50%;
+        }
+    }
+    
+}
