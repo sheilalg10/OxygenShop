@@ -60,6 +60,8 @@
             height: 500px;
             width: 100%;
             .div__img{
+                display: block;
+                position: inherit;
                 width: 100%;
             }
         }

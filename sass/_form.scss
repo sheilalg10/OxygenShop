@@ -112,5 +112,32 @@
 }
 
 @media screen and (min-width: 840px){
-  
+  .sectionform{
+    margin: 0 auto;
+    .article__form{
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      .form__head{
+        width: 35%;
+        margin-top: 20px;
+        .form__contact{
+          display: flex;          
+        }
+        .contact__item{
+          padding-right: 15px;
+        }
+      }
+      .form{
+        width: 40%;
+        .checkbox__container{
+          display: flex;
+        }
+        .div__button{
+          display: flex;
+          justify-content: end;
+        }
+      }
+    }
+  }
 }

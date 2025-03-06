@@ -22,12 +22,26 @@
     .footer__icon{
         position: absolute;
         width: 20%;
-        top: 25px;
+        top: 15px;
         right: 20px;
         .footer__img{
             display: inline-block;
             margin-left: 10px;
             margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 840px){
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        .footer__div{
+            margin-left: 100px;
+        }
+        .footer__icon{
+            width: 100px;
+            margin-right: 100px;
         }
     }
 }
