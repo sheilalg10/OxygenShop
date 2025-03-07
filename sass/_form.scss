@@ -6,13 +6,13 @@
     width: 90%;
     margin: 0 auto;
     .form__title {
-      font-family: $fontRaleway;
+      font-family: $f_Raleway;
       font-size: 2em;
       margin-bottom: 2px;
       font-weight: 600;
     }
     .form__text {
-      font-family: $fontSans;
+      font-family: $f_OpenSans;
       font-size: 0.8em;
       display: inline-block;
     }
@@ -29,10 +29,10 @@
         height: 25px;
       }
       .contact__text {
-        color: rgba(165, 165, 165, 1);
+        color: $c_Grey;
         display: inline-block;
         vertical-align: middle;
-        font-family: $fontSans;
+        font-family: $f_OpenSans;
         font-size: 0.8em;
         font-weight: 600;
       }
@@ -43,8 +43,8 @@
       .form__label {
         display: block;
         text-align: left;
-        font-family: $fontSans;
-        color: rgba(8, 166, 228, 1);
+        font-family: $f_OpenSans;
+        color: $c_Blue;
         font-size: 0.6em;
         font-weight: 700;
         font-variant: small-caps;
@@ -66,35 +66,22 @@
           cursor: pointer;
           width: 24px;
           height: 24px;
-          appearance: none;
           border: solid 1px rgba(149, 152, 154, 1);
           border-radius: 3px;
         }
-        .form__checkbox:checked::before {
-          content: "\2713";
-          font-size: 12px;
-          color: rgba(8, 166, 228, 1);
-          background: white;
-          display: block;
-          text-align: center;
-          line-height: 16px;
-          width: 100%;
-          height: 100%;
-          border-radius: 3px;
-        }
         .checkbox__label {
+          font-family: $f_OpenSans;
           color: rgba(112, 112, 112, 1);
-          font-size: 12px;
+          font-size: 0.8em;
           line-height: 1.5;
-          display: inline-block;
-          width: calc(100% - 25px);
           vertical-align: middle;
+          text-align: end;
         }
       }
       .form__button{
-        background-color: rgba(8, 166, 228, 1);
-        color: white;
-        border: 1px solid rgba(8, 166, 228, 1);
+        background-color: $c_Blue;
+        color: $c_White;
+        border: 1px solid $c_Blue;
         border-radius: 30px;
         padding: 15px 50px;
         cursor: pointer;
@@ -102,8 +89,8 @@
         display: block;
         width: 180px;
         margin: 20px 0px 20px 130px;
-        font-family: $fontSans;
-        font-size: 0.7em;
+        font-family: $f_OpenSans;
+        font-size: 0.8em;
         font-weight: 600;
         box-shadow: 0px 4px 10px rgba(8, 166, 228, 0.69);
       }
@@ -130,12 +117,11 @@
       }
       .form{
         width: 40%;
-        .checkbox__container{
-          display: flex;
-        }
         .div__button{
-          display: flex;
-          justify-content: end;
+          margin-left: 130px;
+          .form__button{
+            font-size: 0.8em;
+          }
         }
       }
     }

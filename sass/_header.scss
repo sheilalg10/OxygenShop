@@ -4,11 +4,11 @@
   position: relative;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.329);
   .header__title {
-    color: $colorblue;
+    color: $c_Blue;
     display: inline-block;
     margin-top: 15px;
     margin-left: 20px;
-    font-family: $fontRaleway;
+    font-family: $f_Raleway;
     font-size: 30px;
   }
   .header__burger {
@@ -23,7 +23,7 @@
       height: 3px;
       width: 100%;
       margin: 3px 0;
-      background-color: $colorblue;
+      background-color: $c_Blue;
     }
   }
   .nav {
@@ -51,15 +51,15 @@
       }
       .nav__link {
         text-decoration: none;
-        color: rgba(165, 165, 165, 1);
-        font-family: $fontSans;
+        color: $c_Grey;
+        font-family: $f_OpenSans;
         font-weight: 700;
         font-size: 0.7em;
         margin-right: 60px;
         &:hover {
           padding-bottom: 20px;
-          border-bottom: solid 4px rgba(8, 166, 228, 1);
-          color: rgba(0, 0, 0, 1);
+          border-bottom: solid 4px $c_Blue;
+          color: $c_Black;
         }
       }
     }

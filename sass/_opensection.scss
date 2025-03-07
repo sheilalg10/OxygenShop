@@ -1,4 +1,4 @@
-.opensection{
+.open__section{
     text-align: center;
     width: 100%;
     .open__article{
@@ -7,27 +7,27 @@
         height: 220px;
         top: 100px;
         left: 30px;
-        .article__title{
-            font-family: Raleway;
+        .open__article__title{
+            font-family: $f_Raleway;
             font-size: 35px;
             padding-top: 10px;
         }
-        .article__paragraph{
-            font-family: $fontSans;
+        .open__article__text{
+            font-family: $f_OpenSans;
             font-size: 15px;
             padding-top: 20px;
             margin: 0 20px;
         }
-        .article__btn{
+        .open__article__btn{
             cursor: pointer;
-            background-color: $colorblue;
-            color: white;
-            border: $colorblue;
+            background-color: $c_Blue;
+            color: $c_White;
+            border: $c_Blue;
             border-radius: 40px;
-            box-shadow: 0px 4px 10px rgba($colorblue, 0.4);
+            box-shadow: 0px 4px 10px rgba($c_Blue, 0.4);
             width: 100%;
             height: 60px;
-            font-family: $fontSans;
+            font-family: $f_OpenSans;
             font-size: 16px;
             margin-top: 30px;
         }
@@ -37,7 +37,7 @@
         width: 100%;
         height: 260px;
         overflow: hidden;
-        .div__img{
+        .open__div__img{
             display: block;
             position: relative;
             background-size: 700px;
@@ -50,7 +50,7 @@
 }
 
 @media screen and (min-width: 840px){
-    .opensection{
+    .open__section{
         .open__article{
             width: 25%;
             padding: 0 15px;
@@ -59,7 +59,7 @@
         .open__div{
             height: 500px;
             width: 100%;
-            .div__img{
+            .open__div__img{
                 display: block;
                 position: inherit;
                 width: 100%;

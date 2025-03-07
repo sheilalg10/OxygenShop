@@ -1,11 +1,11 @@
-.mostsection{
+.most__section{
     width: 100%;
     height: auto;
     text-align: center;
     margin: 10px auto;
     padding: 20px 0px;
-    .most__title{
-        font-family: Raleway;
+    .most__section__title{
+        font-family: $f_Raleway;
         font-size: 2em;
         padding: 0 1em;
         font-weight: lighter;
@@ -13,7 +13,7 @@
     .most__article{
         margin-top: 20px;
         height: auto;
-        .article__stat{
+        .most__article__stat{
             width: 160px;
             height: 170px;
             margin: 10px auto;
@@ -44,12 +44,12 @@
                 }
             }
             .stat__number{
-                font-family: $fontRalewayBlod;
+                font-family: $f_RalewayBlod;
                 font-weight: bold;
                 font-size: 1.2em;
             }
             .stat__text{
-                font-family: $fontRaleway;
+                font-family: $f_Raleway;
                 font-size: 1.1em;
                 color: lightslategrey;
                 margin: 20px 20px;
@@ -57,19 +57,19 @@
             }
         }
         .stat__circle--red{
-            background-color: rgba(251, 59, 100, 1);
+            background-color: $c_Red;
         }
         .circle--blue{
-            background-color: rgba(8, 166, 228, 1);
+            background-color: $c_Blue;
         }
         .circle--green{
-            background-color: rgba(85, 223, 180, 1);
+            background-color: $c_Green;
         }
     }
 }
 
 @media screen and (min-width: 840px){
-    .mostsection{
+    .most__section{
         margin: 50px 0;
         .most__article{
             display: flex;

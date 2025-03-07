@@ -9,14 +9,14 @@
         width: 65%;
         margin-left: 20px;
         .footer__title{
-            font-family: $fontRaleway;
+            font-family: $f_Raleway;
             font-size: 1.8em;
-            color: rgba(8, 166, 228, 1);            
+            color: $c_Blue;            
         }
         .footer__text{
-            font-family: $fontSans;
+            font-family: $f_OpenSans;
             font-size: 0.8em;
-            color: rgba(165, 165, 165, 1);
+            color: $c_Grey;
         }
     }
     .footer__icon{

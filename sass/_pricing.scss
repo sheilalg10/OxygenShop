@@ -1,16 +1,16 @@
-.sectionpricing{
+.section__pricing{
     width: 100%;
     margin: 40px auto;
     text-align: center;
     .pricing__h1{
-        font-family: $fontRaleway;
+        font-family: $f_Raleway;
         font-size: 2.5em;
     }
     .pricing__card{
         width: 300px;
         height: 260px;
         border-radius: 20px;
-        border: solid 1px rgba(251, 59, 100, 1);
+        border: solid 1px $c_Red;
         margin: 20px auto 50px;        
         position: relative;
         .pricing__card__left{
@@ -21,25 +21,25 @@
             bottom: 60px;
             margin-left: 10px;
             .pricing__card__title{
-                font-family: $fontRalewayBlod;
+                font-family: $f_RalewayBlod;
                 font-size: 1.1em;
             }
             .pricing__card__text{
-                font-family: $fontSans;
+                font-family: $f_OpenSans;
                 font-size: 3em;
-                color: rgba(251, 59, 100, 1);
+                color: $c_Red;
                 font-weight: 300;
             }
             .pricing__card__offer{
-                font-family: $fontRaleway;
+                font-family: $f_Raleway;
                 font-size: 0.7em;
                 font-weight: 700;
             }
             .pricing__card__text--blue{
-                color: rgba(7, 172, 230, 1);
+                color: $c_BlueCard;
             }
             .pricing__card__text--green{
-                color: rgba(85, 223, 180, 1);
+                color: $c_Green;
             }
         }
         .pricing__card__left--blue{
@@ -58,7 +58,7 @@
                 text-align: left;
                 .pricing__card__item{
                     margin: 20px 0;
-                    font-family: $fontSans;
+                    font-family: $f_OpenSans;
                     font-size: 1em;
                     font-weight: 400;
                     img {
@@ -68,39 +68,39 @@
             }            
         }
         .pricing__card__button{
-            border: 1px rgba(235, 71, 110, 1);
-            background-color: rgba(235, 71, 110, 1);
-            color: white;
+            border: 1px $c_RedCard;
+            background-color: $c_RedCard;
+            color: $c_White;
             text-align: center;
             width: 150px;
             height: 50px;
             border-radius: 23px;
             position: relative;
-            font-family: $fontSans;
+            font-family: $f_OpenSans;
             font-weight: 700;
             font-size: 0.8em;
             margin-bottom: 20px;
             cursor: pointer;            
         }
         .pricing__card__button--blue{
-            background-color: rgba(7, 172, 230, 1);
-            border: solid 1px rgba(7, 172, 230, 1);
+            background-color: $c_BlueCard;
+            border: solid 1px $c_BlueCard;
         }
         .pricing__card__button--green{
-            background-color: rgba(85, 223, 180, 1);
-            border: solid 1px rgba(85, 223, 180, 1);
+            background-color: $c_Green;
+            border: solid 1px $c_Green;
         }
     }
     .pricing__card--blue{
-        border: rgba(7, 172, 230, 1) solid 1px;
+        border: solid 1px $c_BlueCard;
     }
     .pricing__card--green{
-        border: rgba(85, 223, 180, 1) solid 1px;
+        border: solid 1px $c_Green;
     }       
 }
 
 @media screen and (min-width: 840px){
-    .sectionpricing{
+    .section__pricing{
         .pricing__cards{            
             display: flex;
             width: 80%;
@@ -137,17 +137,17 @@
         }
 
         .pricing__card--red:hover{
-            box-shadow: 0px 4px 10px rgba(235, 71, 110, 1);
+            box-shadow: 0px 4px 10px $c_RedCard;
             transform: scale(1.1);
         }
 
         .pricing__card--blue:hover{
-            box-shadow: 0px 4px 10px rgba($colorblue, 0.4);
+            box-shadow: 0px 4px 10px rgba($c_BlueCard, 0.4);
             transform: scale(1.1);
         }
 
         .pricing__card--green:hover{
-            box-shadow: 0px 4px 10px rgba(85, 223, 180, 1);
+            box-shadow: 0px 4px 10px $c_Green;
             transform: scale(1.1);
         }
 

@@ -21,7 +21,7 @@ body {
   position: relative;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.329); }
   .header .header__title {
-    color: #08A6E4;
+    color: #08a6e4;
     display: inline-block;
     margin-top: 15px;
     margin-left: 20px;
@@ -39,31 +39,59 @@ body {
       height: 3px;
       width: 100%;
       margin: 3px 0;
-      background-color: #08A6E4; }
+      background-color: #08a6e4; }
+  .header .nav {
+    display: none; }
 
-.opensection {
+@media screen and (min-width: 840px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px; }
+    .header .header__burger {
+      display: none; }
+    .header .nav {
+      display: flex; }
+      .header .nav .nav__list {
+        list-style: none;
+        margin-top: 15px; }
+      .header .nav .nav__item {
+        display: inline-block;
+        padding: 5px; }
+      .header .nav .nav__link {
+        text-decoration: none;
+        color: #a5a5a5;
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 0.7em;
+        margin-right: 60px; }
+        .header .nav .nav__link:hover {
+          padding-bottom: 20px;
+          border-bottom: solid 4px #08a6e4;
+          color: black; } }
+.open__section {
   text-align: center;
   width: 100%; }
-  .opensection .open__article {
+  .open__section .open__article {
     margin: 100px auto 30px;
-    width: 300px;
+    width: 80%;
     height: 220px;
     top: 100px;
     left: 30px; }
-    .opensection .open__article .article__title {
+    .open__section .open__article .open__article__title {
       font-family: Raleway;
       font-size: 35px;
       padding-top: 10px; }
-    .opensection .open__article .article__paragraph {
+    .open__section .open__article .open__article__text {
       font-family: "Open Sans";
       font-size: 15px;
       padding-top: 20px;
       margin: 0 20px; }
-    .opensection .open__article .article__btn {
+    .open__section .open__article .open__article__btn {
       cursor: pointer;
-      background-color: #08A6E4;
+      background-color: #08a6e4;
       color: white;
-      border: #08A6E4;
+      border: #08a6e4;
       border-radius: 40px;
       box-shadow: 0px 4px 10px rgba(8, 166, 228, 0.4);
       width: 100%;
@@ -71,11 +99,11 @@ body {
       font-family: "Open Sans";
       font-size: 16px;
       margin-top: 30px; }
-  .opensection .open__div {
+  .open__section .open__div {
     width: 100%;
     height: 260px;
     overflow: hidden; }
-    .opensection .open__div .div__img {
+    .open__section .open__div .open__div__img {
       display: block;
       position: relative;
       background-size: 700px;
@@ -84,81 +112,99 @@ body {
       height: 100%;
       right: 12em; }
 
-.mostsection {
+@media screen and (min-width: 840px) {
+  .open__section .open__article {
+    width: 25%;
+    padding: 0 15px; }
+  .open__section .open__div {
+    height: 500px;
+    width: 100%; }
+    .open__section .open__div .open__div__img {
+      display: block;
+      position: inherit;
+      width: 100%; } }
+.most__section {
   width: 100%;
   height: auto;
   text-align: center;
   margin: 10px auto;
   padding: 20px 0px; }
-  .mostsection .most__title {
+  .most__section .most__section__title {
     font-family: Raleway;
     font-size: 2em;
     padding: 0 1em;
     font-weight: lighter; }
-  .mostsection .most__article {
+  .most__section .most__article {
     margin-top: 20px;
     height: auto; }
-    .mostsection .most__article .article__stat {
+    .most__section .most__article .most__article__stat {
       width: 160px;
       height: 170px;
       margin: 10px auto; }
-      .mostsection .most__article .article__stat .stat__circle {
+      .most__section .most__article .most__article__stat .stat__circle {
         margin: 10px 0;
         border-radius: 50%;
         width: 60px;
         height: 60px;
         display: inline-block;
         position: relative; }
-        .mostsection .most__article .article__stat .stat__circle .stat__circle__person {
+        .most__section .most__article .most__article__stat .stat__circle .stat__circle__person {
           position: absolute;
           width: 40px;
           height: 50px;
           top: 2px; }
-        .mostsection .most__article .article__stat .stat__circle .stat__circle__eye {
+        .most__section .most__article .most__article__stat .stat__circle .stat__circle__eye {
           position: absolute;
           top: 10px;
           left: 18px; }
-        .mostsection .most__article .article__stat .stat__circle .stat__circle__catalog {
+        .most__section .most__article .most__article__stat .stat__circle .stat__circle__catalog {
           position: absolute;
           width: 48px;
           height: 44px;
           top: 8px;
           left: 32px; }
-      .mostsection .most__article .article__stat .stat__number {
+      .most__section .most__article .most__article__stat .stat__number {
         font-family: RalewayBlod;
         font-weight: bold;
         font-size: 1.2em; }
-      .mostsection .most__article .article__stat .stat__text {
+      .most__section .most__article .most__article__stat .stat__text {
         font-family: Raleway;
         font-size: 1.1em;
         color: lightslategrey;
         margin: 20px 20px;
         text-align: center; }
-    .mostsection .most__article .stat__circle--red {
+    .most__section .most__article .stat__circle--red {
       background-color: #fb3b64; }
-    .mostsection .most__article .circle--blue {
+    .most__section .most__article .circle--blue {
       background-color: #08a6e4; }
-    .mostsection .most__article .circle--green {
+    .most__section .most__article .circle--green {
       background-color: #55dfb4; }
 
-.sectioncards {
+@media screen and (min-width: 840px) {
+  .most__section {
+    margin: 50px 0; }
+    .most__section .most__article {
+      display: flex;
+      margin: 50px auto;
+      width: 50%; } }
+.section__cards {
   border: solid #f7f7f7;
   background-color: #f7f7f7;
   margin-top: 40px; }
-  .sectioncards .section__card {
+  .section__cards .section__card {
     width: 315px;
     height: 380px;
     margin: 40px auto;
     border: solid 1px #e8e9ed;
     border-radius: 5px;
     background-color: white; }
-    .sectioncards .section__card .div__top {
+    .section__cards .section__card .div__card__one {
       width: 100%;
       height: auto;
       margin: 30px auto 10px;
       position: relative;
       display: inline-block; }
-      .sectioncards .section__card .div__top .card__circle {
+      .section__cards .section__card .div__card__one .card__circle {
         width: 90px;
         height: 90px;
         border-radius: 40px;
@@ -167,7 +213,7 @@ body {
         position: absolute;
         left: 10.5em;
         bottom: 2.5em; }
-      .sectioncards .section__card .div__top .card__ellipse {
+      .section__cards .section__card .div__card__one .card__ellipse {
         width: 132px;
         height: 132px;
         background-color: #08a6e4;
@@ -175,62 +221,64 @@ body {
         border-radius: 50%;
         left: 5em;
         bottom: 1em; }
-      .sectioncards .section__card .div__top .card__macbook {
+      .section__cards .section__card .div__card__one .card__macbook {
         display: block;
         width: 195px;
         height: 110px;
         margin: 0 auto;
         position: relative; }
-      .sectioncards .section__card .div__top .card__phone {
+      .section__cards .section__card .div__card__one .card__phone {
         display: block;
         position: relative;
         margin: 0 auto;
         left: 0.9em;
         bottom: 0.4em; }
-    .sectioncards .section__card .div__bottom {
+    .section__cards .section__card .div__card__two {
       width: 90%;
       height: auto;
       margin: 0px auto; }
-      .sectioncards .section__card .div__bottom .bottom__title {
+      .section__cards .section__card .div__card__two .card__title {
         margin-top: 30px;
         font-family: Raleway;
         font-weight: 500;
         font-size: 2em;
         width: 218px; }
-      .sectioncards .section__card .div__bottom .bottom__text {
+      .section__cards .section__card .div__card__two .card__text {
         margin-top: 40px;
         font-family: "Open Sans";
         font-size: 0.9em;
         color: black;
         font-weight: 500; }
-      .sectioncards .section__card .div__bottom .bottom__title2 {
+      .section__cards .section__card .div__card__two .card__title__two {
         font-family: Raleway;
         font-weight: 500;
         font-size: 2em;
         width: 218px; }
-      .sectioncards .section__card .div__bottom .bottom__text2 {
+      .section__cards .section__card .div__card__two .card__text__two {
         margin-top: 20px;
         font-family: "Open Sans";
         font-size: 0.9em;
         color: black;
         font-weight: 500; }
-  .sectioncards .section__longcard {
+      .section__cards .section__card .div__card__two .card__line {
+        display: none; }
+  .section__cards .section__longcard {
     width: 315px;
     height: 520px;
-    margin: 40px auto;
-    border: solid 1px #e8e9ed;
-    border-radius: 5px;
-    background-color: white; }
-    .sectioncards .section__longcard .div__toplongcard {
-      width: 90%;
+    margin: 40px auto; }
+    .section__cards .section__longcard .div__longcard__one {
+      width: 100%;
       height: 270px;
-      margin: 30px auto 0px; }
-      .sectioncards .section__longcard .div__toplongcard .toplongcard__title {
+      padding: 15px 0 5px 20px;
+      border: solid 1px #e8e9ed;
+      border-radius: 5px 5px 0 0;
+      background-color: white; }
+      .section__cards .section__longcard .div__longcard__one .longcard__title {
         font-family: Raleway;
         font-weight: 500;
         font-size: 2em;
         width: 260px; }
-      .sectioncards .section__longcard .div__toplongcard .toplongcard__text {
+      .section__cards .section__longcard .div__longcard__one .longcard__text {
         width: 274px;
         margin-top: 20px;
         margin-right: 20px;
@@ -238,49 +286,337 @@ body {
         font-size: 1em;
         color: black;
         font-weight: 500; }
-    .sectioncards .section__longcard .div__bottomlongcard {
+      .section__cards .section__longcard .div__longcard__one .card__line {
+        display: none; }
+    .section__cards .section__longcard .div__longcard__two {
       width: 100%;
       height: 220px;
       background-color: #55dfb4;
       border: solid 1px #e8e9ed;
       border-radius: 5px; }
-      .sectioncards .section__longcard .div__bottomlongcard .longcard__img {
+      .section__cards .section__longcard .div__longcard__two .longcard__img {
         margin-top: 30px; }
 
-.sectionpricing {
-  border: solid black;
+@media screen and (min-width: 840px) {
+  .section__cards .section__card {
+    width: 50%;
+    height: 370px;
+    display: flex; }
+    .section__cards .section__card .div__card__one .card__circle {
+      width: 180px;
+      height: 180px;
+      bottom: 100px;
+      left: 250px; }
+    .section__cards .section__card .div__card__one .card__macbook {
+      width: 380px;
+      height: 220px;
+      margin: 80px auto; }
+    .section__cards .section__card .div__card__one .card__ellipse {
+      width: 320px;
+      height: 320px; }
+    .section__cards .section__card .div__card__one .card__phone {
+      width: 400px;
+      height: 320px;
+      left: 50px;
+      top: 20px; }
+    .section__cards .section__card .div__card__two {
+      padding: 80px 40px 0; }
+      .section__cards .section__card .div__card__two .card__line {
+        display: flex;
+        width: 320px;
+        margin-top: 40px;
+        border: solid #fb3b64 2px; }
+      .section__cards .section__card .div__card__two .card__line--blue {
+        border: solid #07ace6 2px; }
+  .section__cards .section__card--right {
+    flex-direction: row-reverse; }
+  .section__cards .section__longcard {
+    display: flex;
+    justify-content: space-between;
+    height: 370px;
+    width: 50%; }
+    .section__cards .section__longcard .div__longcard__one {
+      border-radius: 5px;
+      width: 520px;
+      height: 370px;
+      padding: 80px 0 0 30px; }
+      .section__cards .section__longcard .div__longcard__one .longcard__title {
+        width: 70%; }
+      .section__cards .section__longcard .div__longcard__one .longcard__text {
+        width: 80%; }
+      .section__cards .section__longcard .div__longcard__one .card__line {
+        display: flex;
+        width: 320px;
+        margin-top: 40px;
+        border: solid #55dfb4 2px; }
+    .section__cards .section__longcard .div__longcard__two {
+      width: 370px;
+      height: 370px; }
+      .section__cards .section__longcard .div__longcard__two .longcard__img {
+        margin-top: 100px;
+        margin-left: 40px; } }
+.section__pricing {
   width: 100%;
-  margin: 40px auto; }
-  .sectionpricing .pricing__h1 {
+  margin: 40px auto;
+  text-align: center; }
+  .section__pricing .pricing__h1 {
     font-family: Raleway;
     font-size: 2.5em; }
-  .sectionpricing .pricing__basic {
-    margin: 20px auto;
+  .section__pricing .pricing__card {
     width: 300px;
-    height: 280px;
-    border: solid #fb3b64 1px;
+    height: 260px;
     border-radius: 20px;
+    border: solid 1px #fb3b64;
+    margin: 20px auto 50px;
     position: relative; }
-    .sectionpricing .pricing__basic .pricing__header {
+    .section__pricing .pricing__card .pricing__card__left {
       display: inline-block;
       width: 35%;
-      border: solid black; }
-    .sectionpricing .pricing__basic .pricing__list {
-      width: 60%;
+      height: auto;
+      position: relative;
+      bottom: 60px;
+      margin-left: 10px; }
+      .section__pricing .pricing__card .pricing__card__left .pricing__card__title {
+        font-family: RalewayBlod;
+        font-size: 1.1em; }
+      .section__pricing .pricing__card .pricing__card__left .pricing__card__text {
+        font-family: "Open Sans";
+        font-size: 3em;
+        color: #fb3b64;
+        font-weight: 300; }
+      .section__pricing .pricing__card .pricing__card__left .pricing__card__offer {
+        font-family: Raleway;
+        font-size: 0.7em;
+        font-weight: 700; }
+      .section__pricing .pricing__card .pricing__card__left .pricing__card__text--blue {
+        color: #07ace6; }
+      .section__pricing .pricing__card .pricing__card__left .pricing__card__text--green {
+        color: #55dfb4; }
+    .section__pricing .pricing__card .pricing__card__left--blue {
+      bottom: 40px; }
+    .section__pricing .pricing__card .pricing__card__left--green {
+      bottom: 40px; }
+    .section__pricing .pricing__card .pricing__card__right {
+      display: inline-block;
+      width: 55%;
+      height: auto;
+      margin-left: 10px; }
+      .section__pricing .pricing__card .pricing__card__right .pricing__card__list {
+        list-style: none;
+        text-align: left; }
+        .section__pricing .pricing__card .pricing__card__right .pricing__card__list .pricing__card__item {
+          margin: 20px 0;
+          font-family: "Open Sans";
+          font-size: 1em;
+          font-weight: 400; }
+          .section__pricing .pricing__card .pricing__card__right .pricing__card__list .pricing__card__item img {
+            padding-right: 5px; }
+    .section__pricing .pricing__card .pricing__card__button {
+      border: 1px #eb476e;
+      background-color: #eb476e;
+      color: white;
+      text-align: center;
+      width: 150px;
+      height: 50px;
+      border-radius: 23px;
+      position: relative;
+      font-family: "Open Sans";
+      font-weight: 700;
+      font-size: 0.8em;
+      margin-bottom: 20px;
+      cursor: pointer; }
+    .section__pricing .pricing__card .pricing__card__button--blue {
+      background-color: #07ace6;
+      border: solid 1px #07ace6; }
+    .section__pricing .pricing__card .pricing__card__button--green {
+      background-color: #55dfb4;
+      border: solid 1px #55dfb4; }
+  .section__pricing .pricing__card--blue {
+    border: solid 1px #07ace6; }
+  .section__pricing .pricing__card--green {
+    border: solid 1px #55dfb4; }
+
+@media screen and (min-width: 840px) {
+  .section__pricing .pricing__cards {
+    display: flex;
+    width: 80%;
+    margin: 15px auto; }
+    .section__pricing .pricing__cards .pricing__card {
+      width: 370px;
+      height: 500px;
+      text-align: center; }
+      .section__pricing .pricing__cards .pricing__card .pricing__card__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 50px;
+        left: 100px; }
+      .section__pricing .pricing__cards .pricing__card .pricing__card__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 60px;
+        margin-left: 10px; }
+        .section__pricing .pricing__cards .pricing__card .pricing__card__right .pricing__card__list {
+          width: 100%;
+          margin-top: 50px;
+          margin-left: 80px;
+          text-align: center; }
+      .section__pricing .pricing__cards .pricing__card .pricing__card__button {
+        margin-top: 40px;
+        margin-left: 20px; }
+  .section__pricing .pricing__card--red:hover {
+    box-shadow: 0px 4px 10px #eb476e;
+    transform: scale(1.1); }
+  .section__pricing .pricing__card--blue:hover {
+    box-shadow: 0px 4px 10px rgba(7, 172, 230, 0.4);
+    transform: scale(1.1); }
+  .section__pricing .pricing__card--green:hover {
+    box-shadow: 0px 4px 10px #55dfb4;
+    transform: scale(1.1); }
+  .section__pricing .pricing__card__button--red {
+    top: 10px; } }
+.sectionform {
+  width: 100%;
+  height: auto;
+  margin: 60px auto; }
+  .sectionform .article__form {
+    width: 90%;
+    margin: 0 auto; }
+    .sectionform .article__form .form__title {
+      font-family: Raleway;
+      font-size: 2em;
+      margin-bottom: 2px;
+      font-weight: 600; }
+    .sectionform .article__form .form__text {
+      font-family: "Open Sans";
+      font-size: 0.8em;
       display: inline-block; }
-      .sectionpricing .pricing__basic .pricing__list .list__item {
-        width: 100%;
+    .sectionform .article__form .form__contact {
+      margin: 20px 0 40px; }
+      .sectionform .article__form .form__contact .contact__item {
+        margin-bottom: 10px; }
+      .sectionform .article__form .form__contact .contact__img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        width: 25px;
+        height: 25px; }
+      .sectionform .article__form .form__contact .contact__text {
+        color: #a5a5a5;
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "Open Sans";
+        font-size: 0.8em;
+        font-weight: 600; }
+    .sectionform .article__form .form {
+      width: 315px;
+      height: auto; }
+      .sectionform .article__form .form .form__label {
         display: block;
-        border: solid blue; }
-        .sectionpricing .pricing__basic .pricing__list .list__item .div__item {
-          width: 45%; }
-          .sectionpricing .pricing__basic .pricing__list .list__item .div__item .item__img {
-            display: inline-block;
-            text-align: left;
-            border: solid black; }
-        .sectionpricing .pricing__basic .pricing__list .list__item .item__text {
-          display: inline-block;
-          width: 70%;
-          text-align: left; }
+        text-align: left;
+        font-family: "Open Sans";
+        color: #08a6e4;
+        font-size: 0.6em;
+        font-weight: 700;
+        font-variant: small-caps;
+        margin: 10px 0 5px; }
+      .sectionform .article__form .form .form__input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #95989a; }
+      .sectionform .article__form .form .checkbox__container {
+        display: block;
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 30px; }
+        .sectionform .article__form .form .checkbox__container .form__checkbox {
+          margin-right: 10px;
+          cursor: pointer;
+          width: 24px;
+          height: 24px;
+          border: solid 1px #95989a;
+          border-radius: 3px; }
+        .sectionform .article__form .form .checkbox__container .checkbox__label {
+          font-family: "Open Sans";
+          color: #707070;
+          font-size: 0.8em;
+          line-height: 1.5;
+          vertical-align: middle;
+          text-align: end; }
+      .sectionform .article__form .form .form__button {
+        background-color: #08a6e4;
+        color: white;
+        border: 1px solid #08a6e4;
+        border-radius: 30px;
+        padding: 15px 50px;
+        cursor: pointer;
+        text-align: center;
+        display: block;
+        width: 180px;
+        margin: 20px 0px 20px 130px;
+        font-family: "Open Sans";
+        font-size: 0.8em;
+        font-weight: 600;
+        box-shadow: 0px 4px 10px rgba(8, 166, 228, 0.69); }
+
+@media screen and (min-width: 840px) {
+  .sectionform {
+    margin: 0 auto; }
+    .sectionform .article__form {
+      width: 60%;
+      display: flex;
+      justify-content: center; }
+      .sectionform .article__form .form__head {
+        width: 35%;
+        margin-top: 20px; }
+        .sectionform .article__form .form__head .form__contact {
+          display: flex; }
+        .sectionform .article__form .form__head .contact__item {
+          padding-right: 15px; }
+      .sectionform .article__form .form {
+        width: 40%; }
+        .sectionform .article__form .form .div__button {
+          margin-left: 130px; }
+          .sectionform .article__form .form .div__button .form__button {
+            font-size: 0.8em; } }
+.footer {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.329); }
+  .footer .footer__div {
+    display: inline-block;
+    vertical-align: middle;
+    width: 65%;
+    margin-left: 20px; }
+    .footer .footer__div .footer__title {
+      font-family: Raleway;
+      font-size: 1.8em;
+      color: #08a6e4; }
+    .footer .footer__div .footer__text {
+      font-family: "Open Sans";
+      font-size: 0.8em;
+      color: #a5a5a5; }
+  .footer .footer__icon {
+    position: absolute;
+    width: 20%;
+    top: 15px;
+    right: 20px; }
+    .footer .footer__icon .footer__img {
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px; }
+
+@media screen and (min-width: 840px) {
+  .footer {
+    display: flex;
+    justify-content: space-between; }
+    .footer .footer__div {
+      margin-left: 100px; }
+    .footer .footer__icon {
+      width: 100px;
+      margin-right: 100px; } }
 
 /*# sourceMappingURL=style.css.map */

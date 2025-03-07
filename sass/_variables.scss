@@ -13,7 +13,17 @@
     src: url(../assets/fonts/OpenSans-Regular.ttf);
 }
 
-$colorblue: #08A6E4;
-$fontRaleway: Raleway;
-$fontSans: "Open Sans";
-$fontRalewayBlod: RalewayBlod;
+// Colores
+$c_Blue: rgba(8, 166, 228, 1);
+$c_Grey: rgba(165, 165, 165, 1);
+$c_Black: rgba(0, 0, 0, 1);
+$c_White: rgba(255, 255, 255, 1);
+$c_Red: rgba(251, 59, 100, 1);
+$c_Green: rgba(85, 223, 180, 1);
+$c_BlueCard: rgba(7, 172, 230, 1);
+$c_RedCard: rgba(235, 71, 110, 1);
+
+// Fuentes
+$f_Raleway: Raleway;
+$f_OpenSans: "Open Sans";
+$f_RalewayBlod: RalewayBlod;
