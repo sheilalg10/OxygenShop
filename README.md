@@ -13,7 +13,7 @@ git clone https://github.com/sheilalg10/OxygenShop.git
 cd OxygenShop
 ```
 
-### 2️⃣ Instalar dependencias (opcional, si usas Node.js y Sass CLI)
+### 2️⃣ Instalar dependencias (Sass)
 ```sh
 npm install -g sass
 ```
