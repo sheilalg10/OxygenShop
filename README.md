@@ -26,7 +26,7 @@ sass --watch ./sass/style.scss:./css/style.css
 
 ## 📂 Estructura del Proyecto
 ```sh
-📁 tu-repositorio
+📁 OxygenShop
  ├── 📁 css            # Archivos CSS compilados
  ├── 📁 scss           # Archivos fuente SCSS
  ├── 📁 assets         # Imágenes, fuentes...
@@ -37,7 +37,6 @@ sass --watch ./sass/style.scss:./css/style.css
 ## 🎨 Tecnologías Utilizadas
 - **HTML5** para la estructura del sitio web.
 - **SCSS** para estilos avanzados y modularización.
-
 
 ---
 ✍️ **Autor:** [Sheila Lara García](https://github.com/sheilalg10)
