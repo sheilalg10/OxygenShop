@@ -7,24 +7,28 @@
     <title>OXYGENShop</title>
   </head>
   <body>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <button class="return-top" id="returnTop">⬆</button>
     <header class="header">
       <h1 class="header__title">OXYGENShop</h1>
-      <div class="header__burger">
+      <div class="header__burger" id="burger">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">WHY US</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">BENEFITS</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">PRICES</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">CONTACT</a></li>
+          <li class="nav__item"><a class="nav__link" href="#open__section">WHY US</a></li>
+          <li class="nav__item"><a class="nav__link" href="#most__section">BENEFITS</a></li>
+          <li class="nav__item"><a class="nav__link" href="#section__pricing">PRICES</a></li>
+          <li class="nav__item"><a class="nav__link" href="#sectionform">CONTACT</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="open__section">
+      <section class="open__section" id="open__section">
         <article class="open__article">
           <h1 class="open__article__title">Sell More!</h1>
           <p class="open__article__text">
@@ -36,7 +40,7 @@
           <img class="open__div__img" src="assets/images/Background.png" />
         </div>
       </section>
-      <section class="most__section">
+      <section class="most__section" id="most__section">
         <h2 class="most__section__title">The most popular sales platform in country</h2>
         <article class="most__article">
           <div class="most__article__stat">
@@ -49,7 +53,7 @@
             <p class="stat__number">1 0 0 0 0 0 +</p>
             <p class="stat__text">daily entries</p>
           </div>
-          <div class="most__article__stat"">
+          <div class="most__article__stat">
             <div class="stat__circle circle--blue">
               <img class="stat__circle__eye" src="assets/images/Eye 2.png" />
             </div>
@@ -68,7 +72,7 @@
           </div>
         </article>
       </section>
-      <section class="section__cards">
+      <section class="section__cards" id="section__card">
         <article class="section__card section__card--right">
           <div class="div__card__one">
             <div class="card__circle"></div>
@@ -114,7 +118,7 @@
           </div>
         </article>
       </section>
-      <section class="section__pricing">
+      <section class="section__pricing" id="section__pricing">
         <h1 class="pricing__h1">Pricing</h1>
         <div class="pricing__cards">
           <article class="pricing__card pricing__card--red">
@@ -207,7 +211,10 @@
           </article>
         </div>
       </section>
-      <section class="sectionform">
+      <section class="slider" id="slider">
+        
+      </section>
+      <section class="sectionform" id="sectionform">
         <article class="article__form">
           <div class="form__head">
             <h1 class="form__title">Any questions?</h1>
