@@ -3,6 +3,11 @@ const slides = document.querySelectorAll(".slides img");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const dotsContainer = document.getElementById("dots-container");
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("closeBtn");
+const form__modal = document.getElementById("form__modal");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
 
 // Percentage Scroll
 window.addEventListener("scroll", function () {
@@ -68,4 +73,60 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(() => moverSlide(1), 3000);
 
   mostrarSlide(index);
+});
+
+// Modal
+document.addEventListener("DOMContentLoaded", function () {
+  let hasClosed = localStorage.getItem("modalClosed");
+
+  function showModal() {
+    if (!hasClosed) {
+      modal.classList.add("show");
+    }
+  }
+
+  setTimeout(showModal, 5000);
+
+  window.addEventListener("scroll", function () {
+    if (
+      !hasClosed &&
+      this.window.scrollY > this.document.body.scrollHeight * 0.25
+    ) {
+      showModal();
+    }
+  });
+
+  closeBtn.addEventListener("click", function () {
+    modal.classList.remove("show");
+  });
+
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.classList.remove("show");
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key == "Escape") {
+      modal.classList.remove("show");
+    }
+  });
+
+  form__modal.addEventListener("submit", function (event) {
+    let validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    event.preventDefault();
+    if (validEmail.test(email.value.trim())) {
+      message.style.display = "block";
+      message.classList.add("success");
+      message.textContent = "Thanks for subscribing!"
+      setTimeout(() => {
+        modal.classList.remove("show");
+        localStorage.setItem("modalClosed", true);
+      }, 2000);
+    } else {
+      message.style.display = "block";
+      message.classList.add("error");
+      message.textContent = "Subscription failure!"
+    }
+  });
 });
