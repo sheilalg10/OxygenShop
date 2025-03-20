@@ -74,7 +74,7 @@
             <p class="stat__number">2 0 0 0 0 0 0 +</p>
             <p class="stat__text">seen products every day</p>
           </div>
-          <div class="most__article__stat"">
+          <div class="most__article__stat">
             <div class="stat__circle circle--green">
               <img
                 class="stat__circle__catalog"
@@ -261,11 +261,13 @@
             </div>
           </div>
           <div class="form">
-            <form action="index.html" method="GET">
+            <form action="index.html" method="POST" id="form">
               <label for="name" class="form__label">N A M E</label>
-              <input type="text" class="form__input" name="name" />
+              <input type="text" class="form__input" name="name" id="name"/>
+              <span class="error-message" id="nameError">Debe tener entre 2 y 100 letras.</span>
               <label for="email" class="form__label">E M A I L</label>
-              <input type="text" class="form__input" name="email" />
+              <input type="text" class="form__input" name="email" id="emailForm"/>
+              <span class="error-message" id="emailError">Correo no válido.</span>
               <div class="checkbox__container">
                 <input
                   type="checkbox"

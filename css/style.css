@@ -697,6 +697,16 @@ body {
         font-size: 0.8em;
         font-weight: 600;
         box-shadow: 0px 4px 10px rgba(8, 166, 228, 0.69); }
+      .sectionform .article__form .form .error-message {
+        color: red;
+        font-size: 12px;
+        display: none; }
+      .sectionform .article__form .form .error {
+        border: 2px solid red; }
+      .sectionform .article__form .form .errorCheckbox {
+        outline: 2px solid red;
+        border-radius: 3px;
+        padding: 2px; }
 
 @media screen and (min-width: 840px) {
   .sectionform {

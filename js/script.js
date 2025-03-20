@@ -4,6 +4,7 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const dotsContainer = document.getElementById("dots-container");
 const modal = document.getElementById("modal");
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const closeBtn = document.getElementById("closeBtn");
 const form__modal = document.getElementById("form__modal");
 const email = document.getElementById("email");
@@ -12,6 +13,13 @@ const select = document.getElementById("select");
 const pricing__basic = document.getElementById("pricing__basic");
 const pricing__prof = document.getElementById("pricing__prof");
 const pricing__prem = document.getElementById("pricing__prem");
+const form = document.getElementById("form");
+const nameForm = document.getElementById("name")
+const nameError = document.getElementById("nameError");
+const emailForm = document.getElementById("emailForm");
+const emailError = document.getElementById("emailError");
+const form__checkbox = document.getElementById("form__checkbox");
+
 
 // Percentage Scroll
 window.addEventListener("scroll", function () {
@@ -117,9 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   form__modal.addEventListener("submit", function (event) {
-    let validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
     event.preventDefault();
-    if (validEmail.test(email.value.trim())) {
+    if (emailRegex.test(email.value.trim())) {
       message.style.display = "block";
       message.classList.add("success");
       message.textContent = "Thanks for subscribing!";
@@ -135,12 +142,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Select Price
 document.addEventListener("DOMContentLoaded", async function () {
-  const prices = {
-    basic: 0,
-    prof: 25,
-    prem: 60,
-  };
   let exchangeRates = {};
 
   fetch(
@@ -161,13 +164,71 @@ document.addEventListener("DOMContentLoaded", async function () {
     select.addEventListener("change", function(){
       const selectCurrency = select.value;
       const symbol = selectCurrency === "eur" ? "€" : selectCurrency === "usd" ? "$" : "£";
-      const actualPrice = {
+      const price = {
         basic: 0,
         prof: 25,
         premium: 60
     }
-      pricing__basic.textContent = symbol + (actualPrice.basic * exchangeRates[selectCurrency]).toFixed(2);
-      pricing__prof.textContent = symbol + (actualPrice.prof * exchangeRates[selectCurrency]).toFixed(2);
-      pricing__prem.textContent = symbol + (actualPrice.premium * exchangeRates[selectCurrency]).toFixed(2);
+      pricing__basic.textContent = symbol + (price.basic * exchangeRates[selectCurrency]).toFixed(2);
+      pricing__prof.textContent = symbol + (price.prof * exchangeRates[selectCurrency]).toFixed(2);
+      pricing__prem.textContent = symbol + (price.premium * exchangeRates[selectCurrency]).toFixed(2);
     })
+});
+
+// Valid Form
+form.addEventListener("submit", async function(event) {
+  event.preventDefault()
+  let isValid = true;
+
+  // Validar nombre
+  if(!/^\p{L}{2,100}$/u.test(nameForm.value)){
+    nameForm.classList.add("error");
+    nameError.style.display = "inline"
+    isValid = false;
+  }else{
+    nameForm.classList.remove("error");
+    nameError.style.display = "none";
+  }
+  // Validar email
+  if(!emailRegex.test(emailForm.value)){
+    emailForm.classList.add("error");
+    emailError.style.display = "inline";
+    isValid = false;
+  }else{
+    emailForm.classList.remove("error");
+    emailError.style.display = "none";
+  }
+  // Validar checkbox
+  if(!form__checkbox.checked){
+    form__checkbox.classList.add("errorCheckbox");
+    isValid = false;
+  }else{
+    form__checkbox.classList.remove("errorCheckbox");
+  }
+
+  // Recoger datos
+  if(isValid){
+    const formData = {
+      nameForm: nameForm.value,
+      emailForm: emailForm.value,
+      form__checkbox: form__checkbox
+    };
+
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+      console.log("Respuesta de la API:" + result);
+      alert("Formulario enviado con éxito!");
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+            alert("Hubo un error al enviar el formulario.");
+    }
+  }
 });

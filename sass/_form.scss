@@ -78,7 +78,7 @@
           text-align: end;
         }
       }
-      .form__button{
+      .form__button {
         background-color: $c_Blue;
         color: $c_White;
         border: 1px solid $c_Blue;
@@ -94,32 +94,45 @@
         font-weight: 600;
         box-shadow: 0px 4px 10px rgba(8, 166, 228, 0.69);
       }
+      .error-message {
+        color: red;
+        font-size: 12px;
+        display: none;
+      }
+      .error {
+        border: 2px solid red;
+      }
+      .errorCheckbox {
+        outline: 2px solid red;
+        border-radius: 3px;
+        padding: 2px;
+      }
     }
   }
 }
 
-@media screen and (min-width: 840px){
-  .sectionform{
+@media screen and (min-width: 840px) {
+  .sectionform {
     margin: 0 auto;
-    .article__form{
+    .article__form {
       width: 60%;
       display: flex;
       justify-content: center;
-      .form__head{
+      .form__head {
         width: 35%;
         margin-top: 20px;
-        .form__contact{
-          display: flex;          
+        .form__contact {
+          display: flex;
         }
-        .contact__item{
+        .contact__item {
           padding-right: 15px;
         }
       }
-      .form{
+      .form {
         width: 40%;
-        .div__button{
+        .div__button {
           margin-left: 130px;
-          .form__button{
+          .form__button {
             font-size: 0.8em;
           }
         }
