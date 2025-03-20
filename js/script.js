@@ -8,6 +8,10 @@ const closeBtn = document.getElementById("closeBtn");
 const form__modal = document.getElementById("form__modal");
 const email = document.getElementById("email");
 const message = document.getElementById("message");
+const select = document.getElementById("select");
+const pricing__basic = document.getElementById("pricing__basic");
+const pricing__prof = document.getElementById("pricing__prof");
+const pricing__prem = document.getElementById("pricing__prem");
 
 // Percentage Scroll
 window.addEventListener("scroll", function () {
@@ -118,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (validEmail.test(email.value.trim())) {
       message.style.display = "block";
       message.classList.add("success");
-      message.textContent = "Thanks for subscribing!"
+      message.textContent = "Thanks for subscribing!";
       setTimeout(() => {
         modal.classList.remove("show");
         localStorage.setItem("modalClosed", true);
@@ -126,7 +130,44 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       message.style.display = "block";
       message.classList.add("error");
-      message.textContent = "Subscription failure!"
+      message.textContent = "Subscription failure!";
     }
   });
+});
+
+document.addEventListener("DOMContentLoaded", async function () {
+  const prices = {
+    basic: 0,
+    prof: 25,
+    prem: 60,
+  };
+  let exchangeRates = {};
+
+  fetch(
+    "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json"
+  )
+    .then((res) => res.json())
+    .then((json) => {
+      exchangeRates = {
+        gbp: json.usd.gbp,
+        eur: json.usd.eur,
+        usd: json.usd.usd,
+      };
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
+    select.addEventListener("change", function(){
+      const selectCurrency = select.value;
+      const symbol = selectCurrency === "eur" ? "€" : selectCurrency === "usd" ? "$" : "£";
+      const actualPrice = {
+        basic: 0,
+        prof: 25,
+        premium: 60
+    }
+      pricing__basic.textContent = symbol + (actualPrice.basic * exchangeRates[selectCurrency]).toFixed(2);
+      pricing__prof.textContent = symbol + (actualPrice.prof * exchangeRates[selectCurrency]).toFixed(2);
+      pricing__prem.textContent = symbol + (actualPrice.premium * exchangeRates[selectCurrency]).toFixed(2);
+    })
 });

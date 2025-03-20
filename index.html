@@ -134,11 +134,18 @@
       </section>
       <section class="section__pricing" id="section__pricing">
         <h1 class="pricing__h1">Pricing</h1>
+        <div class="pricing__select">
+          <select name="select" id="select">
+            <option value="eur">EUR</option>
+            <option value="usd">USD</option>
+            <option value="gbp">GBP</option>
+          </select>
+        </div>
         <div class="pricing__cards">
           <article class="pricing__card pricing__card--red">
             <div class="pricing__card__left">
               <h2 class="pricing__card__title">Basic</h2>
-              <p class="pricing__card__text">$0</p>
+              <p class="pricing__card__text" id="pricing__basic">$0</p>
             </div>
             <div class="pricing__card__right">
               <ul class="pricing__card__list">
@@ -167,7 +174,7 @@
           <article class="pricing__card pricing__card--blue">
             <div class="pricing__card__left pricing__card__left--blue">
               <h2 class="pricing__card__title">Professional</h2>
-              <p class="pricing__card__text pricing__card__text--blue">$25</p>
+              <p class="pricing__card__text pricing__card__text--blue" id="pricing__prof">$25</p>
               <p class="pricing__card__offer">Limited offer</p>
             </div>
             <div class="pricing__card__right">
@@ -197,7 +204,7 @@
           <article class="pricing__card pricing__card--green">
             <div class="pricing__card__left pricing__card__left--green">
               <h2 class="pricing__card__title">Premium</h2>
-              <p class="pricing__card__text pricing__card__text--green">$60</p>
+              <p class="pricing__card__text pricing__card__text--green" id="pricing__prem">$60</p>
               <p class="pricing__card__offer">Limited offer</p>
             </div>
             <div class="pricing__card__right">
