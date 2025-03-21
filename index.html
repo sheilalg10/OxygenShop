@@ -7,24 +7,42 @@
     <title>OXYGENShop</title>
   </head>
   <body>
+    <!-- Precentage Progress -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    <!-- Btn Retunr to the Top -->
+    <button class="return-top" id="returnTop">⬆</button>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+          <span class="close-btn" id="closeBtn">&times;</span>
+          <h2 class="modal__title">Subscribe to our newsletter</h2>
+          <form id="form__modal" method="GET" action="index.html">
+              <input type="email" class="email" id="email" placeholder="Enter your email" required>
+              <button class="btn__submit" type="submit">Subscribe</button>
+          </form>
+          <p id="message" class="message"></p>
+      </div>
+    </div>
     <header class="header">
       <h1 class="header__title">OXYGENShop</h1>
-      <div class="header__burger">
+      <div class="header__burger" id="burger">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <nav class="nav">
+      <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a class="nav__link" href="#">WHY US</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">BENEFITS</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">PRICES</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">CONTACT</a></li>
+          <li class="nav__item"><a class="nav__link" href="#open__section">WHY US</a></li>
+          <li class="nav__item"><a class="nav__link" href="#most__section">BENEFITS</a></li>
+          <li class="nav__item"><a class="nav__link" href="#section__pricing">PRICES</a></li>
+          <li class="nav__item"><a class="nav__link" href="#sectionform">CONTACT</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="open__section">
+      <section class="open__section" id="open__section">
         <article class="open__article">
           <h1 class="open__article__title">Sell More!</h1>
           <p class="open__article__text">
@@ -36,7 +54,7 @@
           <img class="open__div__img" src="assets/images/Background.png" />
         </div>
       </section>
-      <section class="most__section">
+      <section class="most__section" id="most__section">
         <h2 class="most__section__title">The most popular sales platform in country</h2>
         <article class="most__article">
           <div class="most__article__stat">
@@ -49,14 +67,14 @@
             <p class="stat__number">1 0 0 0 0 0 +</p>
             <p class="stat__text">daily entries</p>
           </div>
-          <div class="most__article__stat"">
+          <div class="most__article__stat">
             <div class="stat__circle circle--blue">
               <img class="stat__circle__eye" src="assets/images/Eye 2.png" />
             </div>
             <p class="stat__number">2 0 0 0 0 0 0 +</p>
             <p class="stat__text">seen products every day</p>
           </div>
-          <div class="most__article__stat"">
+          <div class="most__article__stat">
             <div class="stat__circle circle--green">
               <img
                 class="stat__circle__catalog"
@@ -68,7 +86,7 @@
           </div>
         </article>
       </section>
-      <section class="section__cards">
+      <section class="section__cards" id="section__card">
         <article class="section__card section__card--right">
           <div class="div__card__one">
             <div class="card__circle"></div>
@@ -114,13 +132,20 @@
           </div>
         </article>
       </section>
-      <section class="section__pricing">
+      <section class="section__pricing" id="section__pricing">
         <h1 class="pricing__h1">Pricing</h1>
+        <div class="pricing__select">
+          <select name="select" id="select">
+            <option value="eur">EUR</option>
+            <option value="usd">USD</option>
+            <option value="gbp">GBP</option>
+          </select>
+        </div>
         <div class="pricing__cards">
           <article class="pricing__card pricing__card--red">
             <div class="pricing__card__left">
               <h2 class="pricing__card__title">Basic</h2>
-              <p class="pricing__card__text">$0</p>
+              <p class="pricing__card__text" id="pricing__basic">$0</p>
             </div>
             <div class="pricing__card__right">
               <ul class="pricing__card__list">
@@ -149,7 +174,7 @@
           <article class="pricing__card pricing__card--blue">
             <div class="pricing__card__left pricing__card__left--blue">
               <h2 class="pricing__card__title">Professional</h2>
-              <p class="pricing__card__text pricing__card__text--blue">$25</p>
+              <p class="pricing__card__text pricing__card__text--blue" id="pricing__prof">$25</p>
               <p class="pricing__card__offer">Limited offer</p>
             </div>
             <div class="pricing__card__right">
@@ -179,7 +204,7 @@
           <article class="pricing__card pricing__card--green">
             <div class="pricing__card__left pricing__card__left--green">
               <h2 class="pricing__card__title">Premium</h2>
-              <p class="pricing__card__text pricing__card__text--green">$60</p>
+              <p class="pricing__card__text pricing__card__text--green" id="pricing__prem">$60</p>
               <p class="pricing__card__offer">Limited offer</p>
             </div>
             <div class="pricing__card__right">
@@ -207,7 +232,19 @@
           </article>
         </div>
       </section>
-      <section class="sectionform">
+      <section class="section__slider" id="section__slider">
+        <div class="slider">
+          <div class="slides">
+            <img src="assets/images/iso-republic-business-worker-laptop-desk-2.jpg" class="active">
+            <img src="assets/images/iso-republic-hands-laptop-work.jpg">
+            <img src="assets/images/iso-republic-hands-on-laptop-women.jpg">
+          </div>
+          <button class="prev" id="prev">&#10094;</button>
+          <button class="next" id="next">&#10095;</button>
+          <div class="dots-container" id="dots-container"></div>
+        </div>
+      </section>
+      <section class="sectionform" id="sectionform">
         <article class="article__form">
           <div class="form__head">
             <h1 class="form__title">Any questions?</h1>
@@ -224,11 +261,13 @@
             </div>
           </div>
           <div class="form">
-            <form action="index.html" method="GET">
+            <form action="index.html" method="POST" id="form">
               <label for="name" class="form__label">N A M E</label>
-              <input type="text" class="form__input" name="name" />
+              <input type="text" class="form__input" name="name" id="name"/>
+              <span class="error-message" id="nameError">Debe tener entre 2 y 100 letras.</span>
               <label for="email" class="form__label">E M A I L</label>
-              <input type="text" class="form__input" name="email" />
+              <input type="text" class="form__input" name="email" id="emailForm"/>
+              <span class="error-message" id="emailError">Correo no válido.</span>
               <div class="checkbox__container">
                 <input
                   type="checkbox"
@@ -264,5 +303,6 @@
         </div>
       </footer>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>
