@@ -14,12 +14,11 @@ const pricing__basic = document.getElementById("pricing__basic");
 const pricing__prof = document.getElementById("pricing__prof");
 const pricing__prem = document.getElementById("pricing__prem");
 const form = document.getElementById("form");
-const nameForm = document.getElementById("name")
+const nameForm = document.getElementById("name");
 const nameError = document.getElementById("nameError");
 const emailForm = document.getElementById("emailForm");
 const emailError = document.getElementById("emailError");
 const form__checkbox = document.getElementById("form__checkbox");
-
 
 // Percentage Scroll
 window.addEventListener("scroll", function () {
@@ -108,6 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  function closeModalFunction() {
+    modal.classList.remove("show");
+    localStorage.setItem("modalClosed", "true");
+  }
+
   closeBtn.addEventListener("click", function () {
     modal.classList.remove("show");
   });
@@ -131,8 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       message.classList.add("success");
       message.textContent = "Thanks for subscribing!";
       setTimeout(() => {
-        modal.classList.remove("show");
-        localStorage.setItem("modalClosed", true);
+        closeModalFunction();
       }, 2000);
     } else {
       message.style.display = "block";
@@ -161,74 +164,90 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.log(err);
     });
 
-    select.addEventListener("change", function(){
-      const selectCurrency = select.value;
-      const symbol = selectCurrency === "eur" ? "€" : selectCurrency === "usd" ? "$" : "£";
-      const price = {
-        basic: 0,
-        prof: 25,
-        premium: 60
-    }
-      pricing__basic.textContent = symbol + (price.basic * exchangeRates[selectCurrency]).toFixed(2);
-      pricing__prof.textContent = symbol + (price.prof * exchangeRates[selectCurrency]).toFixed(2);
-      pricing__prem.textContent = symbol + (price.premium * exchangeRates[selectCurrency]).toFixed(2);
-    })
+  select.addEventListener("change", function () {
+    const selectCurrency = select.value;
+    const symbol =
+      selectCurrency === "eur" ? "€" : selectCurrency === "usd" ? "$" : "£";
+    const price = {
+      basic: 0,
+      prof: 25,
+      premium: 60,
+    };
+    pricing__basic.textContent =
+      symbol + (price.basic * exchangeRates[selectCurrency]).toFixed(2);
+    pricing__prof.textContent =
+      symbol + (price.prof * exchangeRates[selectCurrency]).toFixed(2);
+    pricing__prem.textContent =
+      symbol + (price.premium * exchangeRates[selectCurrency]).toFixed(2);
+  });
 });
 
 // Valid Form
-form.addEventListener("submit", async function(event) {
-  event.preventDefault()
+form.addEventListener("submit", async function (event) {
+  event.preventDefault();
   let isValid = true;
 
   // Validar nombre
-  if(!/^\p{L}{2,100}$/u.test(nameForm.value)){
+  if (!/^\p{L}{2,100}$/u.test(nameForm.value)) {
     nameForm.classList.add("error");
-    nameError.style.display = "inline"
+    nameError.style.display = "inline";
     isValid = false;
-  }else{
+  } else {
     nameForm.classList.remove("error");
     nameError.style.display = "none";
   }
   // Validar email
-  if(!emailRegex.test(emailForm.value)){
+  if (!emailRegex.test(emailForm.value)) {
     emailForm.classList.add("error");
     emailError.style.display = "inline";
     isValid = false;
-  }else{
+  } else {
     emailForm.classList.remove("error");
     emailError.style.display = "none";
   }
   // Validar checkbox
-  if(!form__checkbox.checked){
+  if (!form__checkbox.checked) {
     form__checkbox.classList.add("errorCheckbox");
     isValid = false;
-  }else{
+  } else {
     form__checkbox.classList.remove("errorCheckbox");
   }
 
   // Recoger datos
-  if(isValid){
+  if (isValid) {
     const formData = {
       nameForm: nameForm.value,
       emailForm: emailForm.value,
-      form__checkbox: form__checkbox
+      form__checkbox: form__checkbox,
     };
 
     try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       const result = await response.json();
       console.log("Respuesta de la API:" + result);
       alert("Formulario enviado con éxito!");
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
-            alert("Hubo un error al enviar el formulario.");
+      alert("Hubo un error al enviar el formulario.");
     }
   }
+});
+
+// Menu hamburguesa
+const burger = document.getElementById("burger");
+const nav = document.getElementById("nav");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  nav.classList.toggle("active");
 });
