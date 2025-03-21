@@ -154,10 +154,10 @@ body {
   background: #08a6e4;
   color: white;
   border: none;
-  padding: 10px 10px;
-  border-radius: 5px;
+  padding: 5px 10px;
+  border-radius: 50px;
   cursor: pointer;
-  font-size: 2.5em;
+  font-size: 2em;
   display: none;
   transition: opacity 0.3s ease-in-out; }
 
@@ -585,6 +585,15 @@ body {
     border: solid 1px #07ace6; }
   .section__pricing .pricing__card--green {
     border: solid 1px #55dfb4; }
+  .section__pricing .pricing__select {
+    margin: 20px 0;
+    padding: 20px 0; }
+    .section__pricing .pricing__select .select {
+      width: 100px;
+      padding: 10px;
+      border: solid #07ace6;
+      border-radius: 20px;
+      text-align: center; }
 
 @media screen and (min-width: 840px) {
   .section__pricing .pricing__cards {
@@ -634,7 +643,7 @@ body {
   margin: 50px auto; }
   .section__slider .slider {
     position: relative;
-    width: 600px;
+    width: 700px;
     overflow: hidden;
     border: #08a6e4 solid;
     border-radius: 10px; }
