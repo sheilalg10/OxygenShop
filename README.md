@@ -3,7 +3,7 @@
 ![HTML](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5) ![SCSS](https://img.shields.io/badge/SCSS-CSS3-blueviolet?style=for-the-badge&logo=sass) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ## 📌 Descripción
-Este proyecto utiliza **HTML**, **SCSS** y **JavaScript**para crear una interfaz web moderna y estilizada.
+Este proyecto utiliza **HTML**, **SCSS** y **JavaScript** para crear una interfaz web moderna y estilizada.
 
 ## 🚀 Instalación y Configuración
 
