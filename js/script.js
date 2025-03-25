@@ -39,9 +39,7 @@ window.addEventListener("scroll", function () {
 
 // Boton "Retunr to the top"
 returnTop.addEventListener("click", function () {
-  setTimeout(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, 200);
 });
 
 // Slider
