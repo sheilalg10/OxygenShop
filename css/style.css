@@ -36,7 +36,9 @@ body {
     text-align: center;
     position: relative;
     width: 300px;
-    border: #08a6e4 solid; }
+    border: #08a6e4 solid;
+    top: 30%;
+    margin: auto; }
   .modal .close-btn {
     position: absolute;
     top: 10px;

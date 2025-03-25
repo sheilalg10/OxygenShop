@@ -4,11 +4,11 @@ const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 const dotsContainer = document.getElementById("dots-container");
 const modal = document.getElementById("modal");
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const closeBtn = document.getElementById("closeBtn");
 const form__modal = document.getElementById("form__modal");
-const email = document.getElementById("email");
+const emailInput = document.getElementById("email");
 const message = document.getElementById("message");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const select = document.getElementById("select");
 const pricing__basic = document.getElementById("pricing__basic");
 const pricing__prof = document.getElementById("pricing__prof");
@@ -88,61 +88,69 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Modal
 document.addEventListener("DOMContentLoaded", function () {
-  let hasClosed = localStorage.getItem("modalClosed");
+  function isModalClosed() {
+    return localStorage.getItem("modalClosed") === "true";
+  }
 
   function showModal() {
-    if (!hasClosed) {
+    if (!isModalClosed()) {
       modal.classList.add("show");
+      modal.style.display = "block";
     }
+  }
+
+  function closeModalFunction() {
+    modal.classList.remove("show");
+    modal.style.display = "none";
+    localStorage.setItem("modalClosed", "true");
+  }
+
+  function handleScrollTrigger() {
+    if (
+      !isModalClosed() &&
+      window.scrollY > document.body.scrollHeight * 0.25
+    ) {
+      showModal();
+      window.removeEventListener("scroll", handleScrollTrigger);
+    }
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    const email = emailInput.value.trim();
+
+    if (emailRegex.test(email)) {
+      message.style.display = "block";
+      message.classList.add("success");
+      message.textContent = "Thanks for subscribing!";
+      setTimeout(closeModalFunction, 2000);
+    } else {
+      message.style.display = "block";
+      message.classList.add("error");
+      message.textContent = "Please enter a valid email address.";
+    }
+  }
+
+  function addEventListeners() {
+    closeBtn.addEventListener("click", closeModalFunction);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closeModalFunction();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeModalFunction();
+    });
+    form__modal.addEventListener("submit", handleFormSubmit);
+    window.addEventListener("scroll", handleScrollTrigger);
+  }
+
+  if (isModalClosed()) {
+    modal.style.display = "none";
+    return;
   }
 
   setTimeout(showModal, 5000);
 
-  window.addEventListener("scroll", function () {
-    if (
-      !hasClosed &&
-      this.window.scrollY > this.document.body.scrollHeight * 0.25
-    ) {
-      showModal();
-    }
-  });
-
-  function closeModalFunction() {
-    modal.classList.remove("show");
-    localStorage.setItem("modalClosed", "true");
-  }
-
-  closeBtn.addEventListener("click", function () {
-    modal.classList.remove("show");
-  });
-
-  modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
-      modal.classList.remove("show");
-    }
-  });
-
-  document.addEventListener("keydown", function (event) {
-    if (event.key == "Escape") {
-      modal.classList.remove("show");
-    }
-  });
-
-  form__modal.addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (emailRegex.test(email.value.trim())) {
-      message.style.display = "block";
-      message.classList.add("success");
-      message.textContent = "Thanks for subscribing!";
-      setTimeout(() => {
-        closeModalFunction();
-      }, 2000);
-    } else {
-      message.style.display = "block";
-      message.classList.add("error");
-      message.textContent = "Subscription failure!";
-    }
-  });
+  addEventListeners();
 });
 
 // Select Price
@@ -174,11 +182,11 @@ document.addEventListener("DOMContentLoaded", async function () {
       premium: 60,
     };
     pricing__basic.textContent =
-      symbol + (price.basic * exchangeRates[selectCurrency]).toFixed(2);
+      symbol + (price.basic * exchangeRates[selectCurrency]).toFixed(0);
     pricing__prof.textContent =
-      symbol + (price.prof * exchangeRates[selectCurrency]).toFixed(2);
+      symbol + (price.prof * exchangeRates[selectCurrency]).toFixed(0);
     pricing__prem.textContent =
-      symbol + (price.premium * exchangeRates[selectCurrency]).toFixed(2);
+      symbol + (price.premium * exchangeRates[selectCurrency]).toFixed(0);
   });
 });
 
