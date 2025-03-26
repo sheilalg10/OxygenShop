@@ -38,8 +38,8 @@
     transition: height 0.3s ease-in-out;
     .nav__list {
       list-style: none;
-      padding: 0;
-      text-align: center;
+      margin: 10px 30px;
+      padding: 10px 0;
       opacity: 1;
       transition: opacity 0.3s ease-in-out;
     }
@@ -50,10 +50,12 @@
 
     .nav__link {
       text-decoration: none;
+      font-family: $f_OpenSans;
+      font-weight: bolder;
       font-size: 1em;
       color: black;
       display: block;
-      padding: 10px 0;
+      padding: 5px 0;
     }
   }
 
