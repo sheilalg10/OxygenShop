@@ -113,18 +113,20 @@ body {
     transition: height 0.3s ease-in-out; }
     .header .nav .nav__list {
       list-style: none;
-      padding: 0;
-      text-align: center;
+      margin: 10px 30px;
+      padding: 10px 0;
       opacity: 1;
       transition: opacity 0.3s ease-in-out; }
     .header .nav .nav__item {
       margin: 10px 0; }
     .header .nav .nav__link {
       text-decoration: none;
+      font-family: "Open Sans";
+      font-weight: bolder;
       font-size: 1em;
       color: black;
       display: block;
-      padding: 10px 0; }
+      padding: 5px 0; }
   .header .nav.active {
     height: 200px; }
     .header .nav.active .nav__list {
